@@ -1,0 +1,110 @@
+---
+title: "tutoring-summer2022-intror"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# First, on .rmd files, code chunks, and commenting out in the code chunks
+
+# 1 - making a code chunk
+```{r}
+
+```
+
+# 2 - comment out something in a code chunk
+```{r}
+## hey, this is a comment 
+## so i can remember why i wrote this code... when i look back
+## in 2 years...
+```
+
+
+# Let's get started - print "my name is ____"
+```{r}
+
+print("My name is Alyssa!")
+
+```
+
+# Find the sum of 1 2 and 3
+```{r}
+sum(1,5,3)
+```
+
+# Calculate 2 plus 2
+# 100 divided by 23
+# 7998 minus 1242
+# 72 times 87
+
+```{r}
+
+```
+
+# FUNCTIONS
+# Two parts of a function - what are they?
+# 1 - the name
+# 2 - the inputs
+# A function is like a recipe
+# The things in parentheses are the ingredients
+# Make a function that adds 1 plus 2 and outputs the answer
+# call the function "mysum"
+```{r}
+mysum <- function(x,y){
+  sum(x,y)
+}
+```
+
+# Now make another function
+# That takes 3 numbers, sums them, and multiplies that sum by the first number 
+# squared
+# ask it to print the result of this operation
+# Call the function "mysecondfunction"
+```{r}
+mysecondfunction <- function(a,b,c){
+  sum <- a + b + c
+  result <- sum*(a^2)
+  print(result)
+}
+
+mysecondfunction(1,2,3)
+
+```
+
+# Histograms
+
+```{r}
+# First make a "dataset"
+
+inches_of_rain_in_monsoon <- c(1,3,4,2,1,2,5,5,5,5,5,6,6,6,2,2,1,4,5,6,2,3,4,1)
+
+# Based on this vector, which number occurs the most frequently?
+
+inches_of_rain_in_monsoon
+
+# What is the mean?
+
+mean(inches_of_rain_in_monsoon)
+
+# Let's make a histogram
+
+hist(inches_of_rain_in_monsoon)
+
+# Let's make it blue
+
+hist(inches_of_rain_in_monsoon, col = c("blue"))
+
+# Let's change the main title
+
+hist(inches_of_rain_in_monsoon, main="Rainfall in June", col = c("blue"))
+
+# Let's change the x axis
+
+hist(inches_of_rain_in_monsoon, main="Rainfall in June", xlab = "Rainfall (in inches)",col = c("blue"))
+
+
+```
+
+
