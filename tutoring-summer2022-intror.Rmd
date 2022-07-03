@@ -9,6 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # First, on .rmd files, code chunks, and commenting out in the code chunks
 
+
 # 1 - making a code chunk
 ```{r}
 
@@ -16,6 +17,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 2 - comment out something in a code chunk
 ```{r}
+
+1 + 1 
+
 ## hey, this is a comment 
 ## so i can remember why i wrote this code... when i look back
 ## in 2 years...
@@ -27,11 +31,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 print("My name is Alyssa!")
 
+print("123")
+
+print(57)
+
+1+2
+
+an_interesting_quantity <- 1+2
+
+an_interesting_quantity
+
 ```
 
 # Find the sum of 1 2 and 3
 ```{r}
+
+1 + 5 + 3
+
 sum(1,5,3)
+
+list_of_numbers <- c(1,2,3,4,5)
+
+list_of_numbers
+
+mean(list_of_numbers)
+
+(1+2+3+4+5)/5
+
+median(list_of_numbers)
+
+our_function <- function(first_ingredient, second_ingredient){
+  
+  sum <- first_ingredient + second_ingredient
+  
+  interesting_quantity <- sum/(sum)^2
+  
+  print(interesting_quantity)
+
+}
+
+
 ```
 
 # Calculate 2 plus 2
@@ -40,6 +79,8 @@ sum(1,5,3)
 # 72 times 87
 
 ```{r}
+
+
 
 ```
 
@@ -79,6 +120,15 @@ mysecondfunction(1,2,3)
 # First make a "dataset"
 
 inches_of_rain_in_monsoon <- c(1,3,4,2,1,2,5,5,5,5,5,6,6,6,2,2,1,4,5,6,2,3,4,1)
+cm_of_rain_in_monsoon <- c(1,3,4,2,1,2,5,5,5,5,5,6,6,6,2,2,1,4,5,6,2,3,4,1)
+
+data_variable_2 <- c(1,2,3)
+
+hist(data_variable_2)
+
+our_data_set <- as.data.frame(cbind(inches_of_rain_in_monsoon, cm_of_rain_in_monsoon))
+
+hist(our_data_set$inches_of_rain_in_monsoon)
 
 # Based on this vector, which number occurs the most frequently?
 
@@ -87,6 +137,8 @@ inches_of_rain_in_monsoon
 # What is the mean?
 
 mean(inches_of_rain_in_monsoon)
+
+median(inches_of_rain_in_monsoon)
 
 # Let's make a histogram
 
@@ -98,7 +150,7 @@ hist(inches_of_rain_in_monsoon, col = c("blue"))
 
 # Let's change the main title
 
-hist(inches_of_rain_in_monsoon, main="Rainfall in June", col = c("blue"))
+hist(inches_of_rain_in_monsoon, main="Rainfall in June", col = c("red"))
 
 # Let's change the x axis
 
